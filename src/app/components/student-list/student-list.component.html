@@ -1,0 +1,7 @@
+<h2>Estudiantes </h2>
+<ul>
+  <li *ngFor="let student of students">
+    <a [routerLink]="['/students', student.studentId]">{{ student.firstName }} {{ student.lastName }}</a>
+  </li>
+</ul>
+<a routerLink="/students/new">Agregar un Estudiante</a>

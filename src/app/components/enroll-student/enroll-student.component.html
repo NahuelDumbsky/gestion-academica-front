@@ -1,0 +1,8 @@
+<h2>Matriculacion de estudiantes</h2>
+<ul>
+  <li *ngFor="let student of students">
+    {{ student.firstName }} {{ student.LastName }}
+    <button (click)="enroll(student.studentId)">Matricular</button>
+    <button (click)="unenroll(student.studentId)">Desmatricular</button>
+  </li>
+</ul>

@@ -1,0 +1,13 @@
+<h2>{{ isEditMode ? 'Edit' : 'Add' }} Estudiante</h2>
+<form (ngSubmit)= 'saveStudent()'>
+  <div>
+    <label for="firstName">Nombre: </label>
+    <input type="text" id="firstName" [(ngModel)]="student.firstName" name="firstName" required>
+  </div>
+  <div>
+    <label for="lastName">Apellido: </label>
+    <input type="text" id="lastName" [(ngModel)]="student.lastName" name="lastName" required>
+  </div>
+  <button type="submit">Guardar</button>
+  <button type="button" *ngIf="isEditMode" (click)="deleteStudent()">Borrar</button>
+</form>
