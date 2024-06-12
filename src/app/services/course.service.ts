@@ -14,7 +14,7 @@ export class CourseService {
     return this.http.get(this.baseUrl);
   }
 
-  getCourse(courseId: string): Observable<any> { // Cambio de String a string
+  getCourse(courseId: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/${courseId}`);
   }
 
@@ -22,19 +22,19 @@ export class CourseService {
     return this.http.post(this.baseUrl, course);
   }
 
-  updateCourse(courseId: string, course: any): Observable<any> { // Cambio de String a string
+  updateCourse(courseId: string, course: any): Observable<any> {
     return this.http.put(`${this.baseUrl}/${courseId}`, course);
   }
 
-  deleteCourse(courseId: string): Observable<any> { // Cambio de String a string
+  deleteCourse(courseId: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${courseId}`);
   }
 
-  enrollStudent(courseId: string, studentId: string): Observable<any> { // Cambio de String a string
+  enrollStudent(courseId: string, studentId: string): Observable<any> {
     return this.http.post(`${this.baseUrl}/${courseId}/enroll/${studentId}`, {});
   }
 
-  unenrollStudent(courseId: string, studentId: string): Observable<any> { // Cambio de String a string
+  unenrollStudent(courseId: string, studentId: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${courseId}/enroll/${studentId}`);
   }
 }
